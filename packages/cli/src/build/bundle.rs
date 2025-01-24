@@ -302,6 +302,11 @@ impl AppBundle {
     /// Other platforms we might do some stripping or other optimizations
     /// Move the executable to the workdir
     async fn write_main_executable(&mut self) -> Result<()> {
+        println!("app.exe = {:?}", self.app.exe);
+        println!("main_exe = {:?}", self.main_exe());
+        println!("exe_dir = {:?}", self.build.exe_dir());
+        println!("root_dir = {:?}", self.build.root_dir());
+
         match self.build.build.platform() {
             // Run wasm-bindgen on the wasm binary and set its output to be in the bundle folder
             // Also run wasm-opt on the wasm binary, and sets the index.html since that's also the "executable".
