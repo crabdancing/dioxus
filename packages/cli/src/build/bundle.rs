@@ -303,7 +303,7 @@ impl AppBundle {
     /// Move the executable to the workdir
     async fn write_main_executable(&mut self) -> Result<()> {
         println!("app.exe = {:?}", self.app.exe);
-        println!("main_exe = {:?}", self.main_exe());
+        // println!("main_exe = {:?}", self.main_exe());
         println!("exe_dir = {:?}", self.build.exe_dir());
         println!("root_dir = {:?}", self.build.root_dir());
 
